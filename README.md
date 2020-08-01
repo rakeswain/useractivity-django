@@ -60,7 +60,6 @@ class ActivityPeriod(models.Model):
 $ mkdir useractivity (optional)
 $ cd useractivity (optional)
 $ git clone https://github.com/rakeswain/useractivity-django.git
-
 ```
 #### 2. Create a virtual enviornment (Optional)
 ```
