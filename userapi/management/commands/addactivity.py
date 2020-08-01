@@ -25,7 +25,9 @@ def valid_date(s):
     try:
         return datetime.datetime.strptime(s, "%Y-%m-%d.%H:%M")
     except ValueError:
-        msg = f"Not a valid date time string : '{s}'"
+        msg = f"Not a valid date time string : '{s}'. " \
+              f"Make sure your date time string is in this format : %Y-%m-%d.%H:%M ." \
+              f" Example : 2020-10-30.10:34"
         raise CommandError(msg)
 
 
