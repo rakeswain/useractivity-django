@@ -38,7 +38,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         """ Used for handling the arguments. """
 
-        user_id = options['userid']
+        user_id = options['userid'].upper()
 
         # If first name is given the uses it or uses an empty string
         if options['firstname'] is not None:
@@ -56,4 +56,10 @@ class Command(BaseCommand):
             timezone = options['timezone']
         else:
             timezone = "UTC"
-        User.objects.get_or_create(id=user_id, real_name=username, tz=timezone)
+
+        u, created = User.objects.get_or_create(id=user_id, real_name=username, tz=timezone)
+        # If user is created prints success or raises an error
+        if created:
+            self.stdout.write(self.style.SUCCESS(f'User {user_id} created successfully'))
+        elif u:
+            self.stdout.write(self.style.ERROR(f'ERROR : User {user_id} already exists'))
