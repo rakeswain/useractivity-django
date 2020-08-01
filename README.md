@@ -1,6 +1,10 @@
 # useractivity-django
 This is a simple django application done as an assignment. The objective of the app is to store user data along with their monthly activity periods.
 
+Note : The production version of this assignment is live on heroku. Please refer the below link to check that out. 
+
+> Live version : https://useractivitydjango.herokuapp.com/users
+
 ## Table of Contents
 
 - [Quick Overview](#quickoverview)
