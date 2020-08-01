@@ -116,4 +116,5 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
+# This will automatically set up postgresql DATABASE_URL in production and also setup whitenoise for static files
 django_heroku.settings(locals())
