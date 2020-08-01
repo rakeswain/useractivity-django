@@ -1,7 +1,15 @@
 # useractivity-django
 This is a simple django application done as an assignment. The objective of the app is to store user data along with their monthly activity periods.
 
-## Quick Overview
+## Table of Contents
+
+- [Quick Overview](#quickoverview)
+- [Installation](#installation)
+- [API Endpoint](#apiendpoint)
+- [Management Commands](#commands)
+- [Conclusion](#conclusion)
+
+## Quick Overview <a name="quickoverview"></a>
 The application use two models User model and ActivityPeriod model to store data. User model and ActivityPeriod model are in one-to-many relationship.
 #### User model
 It stores user information.
@@ -37,7 +45,7 @@ class ActivityPeriod(models.Model):
         return f"User ID : {self.id} | Start Time : {self.start_time} - End Time : {self.end_time}"
 
 ```
-## Installation 
+## Installation <a name="installation"></a>
 #### 1. Clone the repository 
 ```
 $ mkdir useractivity (optional)
@@ -89,7 +97,7 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CTRL-BREAK.
 ```
 >Navigate to http://localhost:8000
-## API Endpoint 
+## API Endpoint <a name="apiendpoint"></a>
 An API endpoint is created using django rest framework. The API end point serves the user data along with their activity periods across months in JSON. 
 #### JSON Data example
 ```
@@ -123,7 +131,7 @@ An API endpoint is created using django rest framework. The API end point serves
 ![navigate](https://user-images.githubusercontent.com/25014638/89110805-15788d80-d46c-11ea-83c9-9957fccb9632.PNG)
 
 Members array should be empty as you have not populated the database. You can do so using the custom database **management commands**.
-## Management Commands
+## Management Commands <a name="commands"></a>
 We have 2 custom management commands to manage the database
 1. ```populatedb```
 2. ```addactivity```
@@ -168,7 +176,7 @@ Or Send a GET request in postman
 
 ![postman](https://user-images.githubusercontent.com/25014638/89111245-2972be00-d471-11ea-8829-27cb393e804a.PNG)
 
-## Conclusion 
+## Conclusion <a name="conclusion"></a>
 This was a fun little assignment. Future enhancement may include improving the API documentation using packages like SwaggerUI. This was the development version of the app.
 There is a production version live on heroku server. 
 
