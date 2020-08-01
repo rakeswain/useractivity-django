@@ -1,1 +1,1 @@
-web : gunicorn useractivity.wsgi
+web: gunicorn firstDjango.wsgi:application --log-file - --log-level debug
