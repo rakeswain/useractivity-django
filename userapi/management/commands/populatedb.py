@@ -56,10 +56,4 @@ class Command(BaseCommand):
             timezone = options['timezone']
         else:
             timezone = "UTC"
-
-        u, created = User.objects.get_or_create(id=user_id, real_name=username, tz=timezone)
-        # If user is created prints success or raises an error
-        if created:
-            self.stdout.write(self.style.SUCCESS(f'User {user_id} created successfully'))
-        elif u:
-            raise CommandError(f'User {user_id} already exists')
+        User.objects.get_or_create(id=user_id, real_name=username, tz=timezone)

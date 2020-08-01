@@ -37,12 +37,12 @@ class Command(BaseCommand):
         """ Used for parsing the arguments. """
 
         parser.add_argument('-uid', '--userid', type=str, help='Define a user id', required=True)
-        parser.add_argument("-s",
+        parser.add_argument("-st",
                             "--starttime",
                             help="Format for start time - YYYY-MM-DD.HH:MM",
                             required=True,
                             type=valid_date)
-        parser.add_argument("-e",
+        parser.add_argument("-et",
                             "--endtime",
                             help="Format for end time - YYYY-MM-DD.HH:MM",
                             required=True,
@@ -69,6 +69,6 @@ class Command(BaseCommand):
         created = ActivityPeriod.objects.create(user=user, start_time=start_time, end_time=end_time)
 
         if created is not None:
-            self.stdout.write(self.style.SUCCESS(f'User {user_id} created successfully'))
+            self.stdout.write(self.style.SUCCESS(f'User {user_id} updated successfully'))
         else:
             raise CommandError(f"Activity period could not created")
