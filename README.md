@@ -1,8 +1,4 @@
 # useractivity-django
-[![Generic badge](https://img.shields.io/badge/version-v1.0.0-blue.svg)](https://shields.io/)
-[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://shields.io/)
-[![Generic badge](https://img.shields.io/badge/version-django-deepblue.svg)](https://shields.io/)
-
 
 
 This is a simple django application done as an assignment. The objective of the app is to store user data along with their monthly activity periods.
