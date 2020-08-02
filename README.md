@@ -19,7 +19,7 @@ Note : The production version of this assignment is live on heroku. Please refer
 - [Conclusion](#conclusion)
 
 ## Quick Overview <a name="quickoverview"></a>
-The application use two models User model and ActivityPeriod model to store data. User model and ActivityPeriod model are in one-to-many relationship.
+The application uses two models, User model and ActivityPeriod model to store data. User model and ActivityPeriod model are in one-to-many relationship.
 #### User model
 It stores user information.
 ```
@@ -161,7 +161,7 @@ $ python manage.py populatedb -uid/--userid <USERID> \
 Firstname , Lastname and Timezone are optional arguments. 
 
 #### 2. addactivity
-This command is used to add activty periods of a. It populates the `ActityPeriod` table.
+This command is used to add activty periods of a user. It populates the `ActityPeriod` table.
 ##### Syntax
 ```
 $ python manage.py addactivity -uid/--userid <USERID> \
