@@ -4,7 +4,7 @@
 [![Generic badge](https://img.shields.io/badge/build-passing-any.svg)](https://shields.io/)
 [![Generic badge](https://img.shields.io/badge/deployed%20on-heroku-purple.svg)](https://shields.io/)
 
-This is a simple django application done as an assignment. The objective of the app is to store user data along with their monthly activity periods.
+This is a simple django api developed as an assignment. The objective of the api is to store user data along with their monthly activity periods using POST calls and retrieve data using GET calls.
 
 Note : The production version of this assignment is live on heroku. Please refer the below link to check that out. 
 
